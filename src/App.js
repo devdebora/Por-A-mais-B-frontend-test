@@ -1,24 +1,34 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Routes } from './Routes'
+import 'bulma/css/bulma.min.css'
+import {
+  Hero,
+  Section,
+  Container,
+  Heading,
+  Footer,
+} from 'react-bulma-components'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Hero size="large" color="primary" gradient>
+        <Section>
+          <Heading>Por A Mais B - Teste Front-end</Heading>
+        </Section>
+      </Hero>
+
+      <main>
+        <Routes />
+      </main>
+
+      <Footer>
+        <Container>
+          <a href="https://poramaisb.com" tg>
+            Por A Mais B
+          </a>
+        </Container>
+      </Footer>
     </div>
   )
 }
