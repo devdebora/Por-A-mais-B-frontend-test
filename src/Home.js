@@ -1,21 +1,5 @@
-import React, { useState, useEffect } from 'react'
-
-const useUsers = () => {
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(undefined)
-  const [users, setUsers] = useState(undefined)
-
-  useEffect(() => {
-    setLoading(true)
-    fetch('https://reqres.in/api/users')
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false))
-  }, [])
-
-  return { loading, error, users }
-}
+import React from 'react'
+import { useUsers } from './data/users'
 
 export const Home = () => {
   const { loading, error, users } = useUsers()
