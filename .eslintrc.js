@@ -19,12 +19,12 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'jsx-a11y', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single', { avoidEscape: true }],
     semi: ['error', 'never'],
     'no-unused-vars': [
-      'error',
+      'warn',
       {
         ignoreRestSiblings: true,
         varsIgnorePattern: 'React',
