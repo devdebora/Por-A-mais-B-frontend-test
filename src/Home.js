@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-export const Home = () => {
+const useUsers = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(undefined)
   const [users, setUsers] = useState(undefined)
@@ -13,6 +13,12 @@ export const Home = () => {
       .catch((error) => setError(error))
       .finally(() => setLoading(false))
   }, [])
+
+  return { loading, error, users }
+}
+
+export const Home = () => {
+  const { loading, error, users } = useUsers()
 
   return (
     <section>
