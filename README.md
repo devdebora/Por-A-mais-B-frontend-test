@@ -26,3 +26,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+### `yarn eslint <path>`
+
+Lints code according to the project's ESLint configuration.
+
+Rules are available in `.eslintrc.js`.
