@@ -13,16 +13,18 @@ export const Home = () => {
 
       <Section>
         {loading && 'Loading content...'}
-
         {error && (
           <div data-testid="error-message">Houve um erro ao buscar dados</div>
         )}
-
-        {users?.data.map(({ id, first_name, last_name }) => (
-          <Box key={id} renderAs="article">
-            {id} - {first_name} {last_name}
-          </Box>
-        ))}
+        {users && (
+          <div data-testid="users-list">
+            {users?.data.map(({ id, first_name, last_name }) => (
+              <Box key={id} renderAs="article">
+                {id} - {first_name} {last_name}
+              </Box>
+            ))}
+          </div>
+        )}
       </Section>
     </Section>
   )
