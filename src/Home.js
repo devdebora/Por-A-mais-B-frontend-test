@@ -1,10 +1,14 @@
 import React from 'react'
 import { useUsers } from './data/users'
-import { Section, Box, Hero, Heading } from 'react-bulma-components'
+import { Section, Box, Hero, Heading, Switch } from 'react-bulma-components'
+import './Avatar.css'
+import { Link } from 'react-router-dom'
 
-export const Home = () => {
+
+
+export const Home = (props) => {
   const { loading, error, users } = useUsers()
-
+  
   return (
     <Section renderAs="section">
       <Hero>
@@ -18,9 +22,18 @@ export const Home = () => {
         )}
         {users && (
           <div data-testid="users-list">
-            {users?.data.map(({ id, first_name, last_name }) => (
+            {users?.data.map(({ avatar, id, first_name, last_name, email }) => (
               <Box key={id} renderAs="article">
-                {id} - {first_name} {last_name}
+              
+                 <Link to="/user" className="boxes" > 
+                    <div className="name" >
+                      {id} - {first_name} {last_name} 
+                    </div>
+                    <img className="avatar" alt="avatar" src={avatar}/> 
+                    
+                 </Link>
+                
+                 
               </Box>
             ))}
           </div>
