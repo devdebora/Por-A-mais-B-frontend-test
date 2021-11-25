@@ -1,18 +1,22 @@
-.avatar{
-    border: 3px solid lightgrey;
-    border-radius: 50%;
-    overflow: hidden;
-    max-width: 3%;
-    margin-left: 20px;
+.avatar {
+  border: 3px solid lightgrey;
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 40px;
+  margin-left: 20px;
 }
 
-.boxes{
-    text-align: left; 
-    justify-content: left;
-    display: flex;
-    position: relative;
+.boxes {
+  text-align: left;
+  justify-content: left;
+  display: flex;
+  position: relative;
 }
 
-.boxes .name{
-    min-width: 170px;
+.boxes .name {
+  min-width: 170px;
+}
+
+.head {
+  background-image: linear-gradient(to bottom right, rgb(255, 123, 0), yellow);
 }
