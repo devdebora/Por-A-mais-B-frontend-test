@@ -9,6 +9,7 @@ import {
   Footer,
 } from 'react-bulma-components'
 
+
 function App() {
   return (
     <div>
