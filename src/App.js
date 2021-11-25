@@ -8,13 +8,13 @@ import {
   Heading,
   Footer,
 } from 'react-bulma-components'
-
+import './Avatar.css'
 
 function App() {
   return (
     <div>
       <Hero size="large" color="primary" gradient>
-        <Section>
+        <Section className="head">
           <Heading>Por A Mais B - Teste Front-end</Heading>
         </Section>
       </Hero>
